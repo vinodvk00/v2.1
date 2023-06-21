@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        #myIframe {
+            width: 70vw;
+            height: 90vh;
+            border: 2px solid black;
+        }
+        #myvideo {
+            width: 29vw;
+            border: 2px solid black;
+        }
+        #myvideo>video{
+            width: 100%;
+        }
+        .top-section {
+            background-color: #f2f2f2;
+            padding: 2px;
+            position: relative;
+            text-align: center;
+        }
+        .dismiss-button {
+            position: absolute;
+            top: 5px;
+            right: 10px;
+            cursor: pointer;
+        }
+        #description-section {
+            text-align: center;
+            width: 29vw;
+            height: 40vh;
+            border: 2px solid black;
+        }
+        #container {
+            display: flex;
+        }
+        #container > div {
+            flex: 1;
+        }
+    </style>
+    <script>
+        function dismissTopSection() {
+            var topSection = document.getElementById('topSection');
+            topSection.style.display = 'none';
+        }
+    </script>
+</head>
+<body>
+    <!-- info -->
+    <div id="topSection" class="top-section">
+        <span class="dismiss-button" onclick="dismissTopSection()">Dismiss</span>
+        <h1>Team - 51</h1>
+        <p>Ujwal</p>
+        <p>Varun</p>
+        <p>Srujan</p>
+        <p>Vinod</p>
+        <p>Durga</p>
+        <h3>Giving Voice</h3>
+        <!-- Add more content about the project as needed -->
+    </div>
+
+    <div id="container">
+        <div>
+            <div id="myvideo">
+                <video  autoplay loop muted>
+
+                    <!-- Get video from datebase here -->
+
+                    <source src="./videos/hello.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div id="description-section">
+
+                <!-- get video description here -->
+
+                <h2>Video Description</h2>
+                <p>Add your video description text here.</p>
+            </div>
+        </div>
+        <div>
+            <!-- the game is here -->
+            
+            <iframe id="myIframe" src="bubleApp.html" frameborder="0" title="Bubble Game"></iframe>
+        </div>
+    </div>
+
+    <script>
+        function dismissTopSection() {
+            var topSection = document.getElementById('topSection');
+            topSection.style.display = 'none';
+        }
+    </script>
+</body>
+</html>
